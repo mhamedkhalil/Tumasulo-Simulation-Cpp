@@ -1,0 +1,10 @@
+LW r1, 4(r0)     
+LW r2, 8(r0)    
+BEQ r1, r2, 4     
+ADD r3, r1, r2 
+MUL r3, r4, r2        
+NAND r4, r1, r2         
+SW r4, 14(r0) 
+BEQ  r5, r3, 4  
+LW r5, 10(r0)    
+ADDI r6, r5, 5 

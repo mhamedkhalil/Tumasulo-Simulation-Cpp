@@ -1,0 +1,10 @@
+LW r2, 0(r0)
+LW r3, 1(r0)
+ADD r1, r2, r3
+LW r4, 8(r1)
+SW r4, 16(r2)
+BEQ r1, r2, 12
+JAL r0, LOOP
+ADDI r6, r1, 42
+LOOP
+NAND r7, r3, r4

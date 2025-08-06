@@ -1,0 +1,13 @@
+LW x1, 0(x0)
+    LW x2, 1(x0)
+    ADDI x3, x0, 0       
+    ADDI x4, x0, 0       
+
+loop
+    BEQ x4, x2, 24
+    LW x5, 0(x1)         
+    ADD x3, x3, x5       
+    ADDI x1, x1, 4       
+    ADDI x4, x4, 1       
+    JAL x0, loop         
+    SW x3, 0(x0)
